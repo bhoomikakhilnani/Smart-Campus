@@ -1,0 +1,10 @@
+{
+  "tickets": [
+    { "id": "CLN-104", "building": "North Block", "floor": "2", "room": "204", "issue": "Classroom needs cleaning", "details": "", "status": "Open", "createdAt": "2026-10-20T08:00:00.000Z" },
+    { "id": "CLN-103", "building": "Library", "floor": "1", "room": "Reading Hall", "issue": "Spill near study tables", "details": "", "status": "Requires attention", "createdAt": "2026-10-19T08:00:00.000Z" }
+  ],
+  "items": [
+    { "id": "LF-201", "title": "Blue water bottle", "location": "Library, ground floor", "category": "Bottle", "finder": "Aarav Mehta", "date": "2026-10-20T09:00:00.000Z", "image": "", "status": "Available", "messages": [] },
+    { "id": "LF-200", "title": "Wireless earbuds case", "location": "Cafeteria, table 8", "category": "Electronics", "finder": "Diya Shah", "date": "2026-10-19T09:00:00.000Z", "image": "", "status": "Available", "messages": [] }
+  ]
+}

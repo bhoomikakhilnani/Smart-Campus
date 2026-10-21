@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#081321" />
+    <meta name="description" content="Smart Campus — a better campus starts with all of us." />
+    <title>Smart Campus</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      const root = document.getElementById("root");
+      function showStartupError(message) {
+        if (!root || root.childElementCount) return;
+        const panel = document.createElement("main");
+        panel.style.cssText = "display:grid;min-height:100vh;place-content:center;padding:24px;background:#081321;color:#e6edf5;font:14px system-ui,sans-serif";
+        const heading = document.createElement("h1");
+        heading.textContent = "Smart Campus could not start";
+        const details = document.createElement("p");
+        details.textContent = message || "The app module did not load. Check the frontend terminal for details.";
+        details.style.cssText = "max-width:620px;color:#a2b1c0;overflow-wrap:anywhere";
+        const reload = document.createElement("button");
+        reload.textContent = "Reload page";
+        reload.style.cssText = "width:max-content;padding:10px 16px;border:0;border-radius:6px;background:#2d7bc2;color:white;cursor:pointer";
+        reload.onclick = () => window.location.reload();
+        panel.append(heading, details, reload);
+        root.replaceChildren(panel);
+      }
+      window.addEventListener("error", (event) => showStartupError(event.message));
+      window.addEventListener("unhandledrejection", (event) => showStartupError(event.reason?.message));
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
