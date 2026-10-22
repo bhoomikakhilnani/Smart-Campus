@@ -62,7 +62,7 @@ function Login({ onLogin }) {
         {error && <p className="error-text" role="alert">{error}</p>}
         <button className="button primary wide" disabled={busy}>{busy ? "Signing in…" : "Sign in"}<span>→</span></button>
       </form>
-      <div className="demo-box"><span>✦</span><div><strong>Exploring the demo?</strong><small>Use the student demo account.</small></div><button type="button" onClick={() => { setEmail(DEMO_EMAIL); setPassword(DEMO_PASSWORD); }}>Fill demo</button></div>
+     <div className="demo-box"><div><strong>Exploring the demo?</strong><small>Use the student demo account.</small></div><button type="button" onClick={() => { setEmail(DEMO_EMAIL); setPassword(DEMO_PASSWORD); }}>Fill demo</button></div>
       <p className="login-note">Student project prototype <b>·</b> Demo data saved locally</p>
     </section>
     <aside className="login-art"><div className="art-grid" /><div className="art-copy"><p className="eyebrow">A COMMUNITY THAT CARES</p><h2>Little things<br />make a <em>big</em> campus.</h2><span /><p>Report it. Find it. Make campus better for everyone.</p></div><div className="art-note"><b>✳</b><div><strong>Campus care, made simple</strong><small>One connected student community</small></div><span>↗</span></div><i className="art-orbit orbit-a" /><i className="art-orbit orbit-b" /></aside>
