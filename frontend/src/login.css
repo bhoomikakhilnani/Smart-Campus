@@ -1,0 +1,36 @@
+.login-screen {
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+  place-items: center;
+  overflow: auto;
+  padding: 36px 20px;
+  background: radial-gradient(ellipse at 50% 0%, #123154 0, transparent 48%), #081321;
+}
+
+.login-logo {
+  top: 26px;
+  left: 28px;
+}
+
+.login-form-wrap {
+  width: min(430px, 100%);
+  padding: 30px;
+  border: 1px solid #233a53;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #0e1d2f, #0b1827);
+  box-shadow: 0 22px 70px #0005;
+}
+
+@media (max-width: 720px) {
+  .login-logo {
+    top: 16px;
+    left: 18px;
+  }
+
+  .login-form-wrap {
+    width: min(430px, 100%);
+    padding: 25px 20px;
+  }
+}
